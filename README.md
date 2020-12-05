@@ -9,3 +9,6 @@ JOSÉ ORLANDO FERNANDES NETO,
 THALES PESSOA PONTES,
 PEDRO VITOR ALMEIDA DE LIMA,
 DANIEL GOMES MACHADO
+
+// colocando o servidor no ar, rodar dentro da pasta backend(NetJS)
+npm run start:dev
