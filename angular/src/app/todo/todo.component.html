@@ -40,7 +40,6 @@
                         <td [ngStyle]="{'text-decoration-line': todo.done ? 'line-through' : ''}">{{todo.descricao}}</td>
                         <td [ngStyle]="{'text-decoration-line': todo.done ? 'line-through' : ''}">{{todo.data}}</td>
                         <td>
-                            <button [hidden]="todo.done" (click)="done(todo)" class="btn btn-sm btn-primary">Check</button>
                             <button [hidden]="todo.done" (click)="remove(todo.id)" style="margin-left: 5px;" class="btn btn-sm btn-danger">Deletar</button>
                             <button [hidden]="todo.done" (click)="prepareUpdate(todo)" style="margin-left: 5px;" class="btn btn-sm btn-secondary">Alterar</button>
                         </td>
