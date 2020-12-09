@@ -1,11 +1,11 @@
 import { Controller, Post, Body, Get, Put, Delete, Param } from '@nestjs/common';
-import { TodoService } from './todo.service';
-import { Todo } from './todo.entity';
+import { AtendimentoService } from './atendimento.service';
+import { Atendimento } from './atendimento.entity';
 
-@Controller('todo')
-export class TodoController {
+@Controller('atendimento')
+export class AtendimentoController {
 
-  constructor(private service: TodoService) { }
+  constructor(private service: AtendimentoService) { }
 
   @Post()
   async create(@Body('description') descricao: string,
@@ -17,17 +17,17 @@ export class TodoController {
   }
 
   @Get()
-  async listAllTodos() {
+  async listAllAtendimentos() {
     return await this.service.findAll();
   }
 
   @Put()
-  async updateTodo(@Body() todo: Todo) {
-    return await this.service.update(todo);
+  async updateAtendimento(@Body() atendimento: Atendimento) {
+    return await this.service.update(atendimento);
   }
 
   @Delete(':id')
-  async removeTodo(@Param('id') id: number) {
+  async removeAtendimento(@Param('id') id: number) {
     return await this.service.remove(id);
   }
 

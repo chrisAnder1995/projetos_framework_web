@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Todo {
+export class Atendimento {
 
     constructor(coord : string, assunto : string, desc: string, data : string) {
 
