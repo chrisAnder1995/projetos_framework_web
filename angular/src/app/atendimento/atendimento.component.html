@@ -41,7 +41,7 @@
                         <td [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}">{{atendimento.data}}</td>
                         <td>
                             <button [hidden]="atendimento.done" (click)="remove(atendimento.id)" style="margin-left: 5px;" class="btn btn-sm btn-danger">Deletar</button>
-                            <button [hidden]="atendimento.done" (click)="prepareUpdate(atendimento)" style="margin-left: 5px;" class="btn btn-sm btn-secondary">Alterar</button>
+                            <button [hidden]="atendimento.done" (click)="prepareUpdate(atendimento)" style="margin-left: 5px;" class="btn btn-sm btn-outline-info">Alterar</button>
                         </td>
                     </tr>
 
