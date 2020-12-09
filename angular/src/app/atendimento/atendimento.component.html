@@ -1,0 +1,54 @@
+<div class="container mt-5">
+    <h1><i>Atendimento</i></h1>
+    <hr>
+
+
+    <div class="input-group mb-3 mt-5">
+        <input type="text" class="form-control" [(ngModel)]="atendimento.coordenador" placeholder="Coordenador">
+        <input type="text" class="form-control" [(ngModel)]="atendimento.assunto" placeholder="Assunto">
+        <input type="text" class="form-control" [(ngModel)]="atendimento.descricao" placeholder="Descrição">
+        <input type="text" class="form-control" [(ngModel)]="atendimento.data" placeholder="Data">
+        <div class="input-group-append">
+            <button class="btn btn-outline-success" (click)="atendimento.id == undefined ? create() : update(atendimento)" type="button">Save</button>
+        </div>
+    </div>
+
+
+    <div class="card mt-3">
+        <div class="card-header">
+            Lista de atendimento
+            <button style="float:right" (click)="findAll()" class="btn btn-sm btn-outline-info">Recarregar</button>
+        </div>
+        <div class="card-body">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Coordenador</th>
+                        <th scope="col">Assunto</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Data</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let atendimento of atendimentos">
+                        <th [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}" scope="row">{{atendimento.id}}</th>
+                        <td [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}">{{atendimento.coordenador}}</td>
+                        <td [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}">{{atendimento.assunto}}</td>
+                        <td [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}">{{atendimento.descricao}}</td>
+                        <td [ngStyle]="{'text-decoration-line': atendimento.done ? 'line-through' : ''}">{{atendimento.data}}</td>
+                        <td>
+                            <button [hidden]="atendimento.done" (click)="remove(atendimento.id)" style="margin-left: 5px;" class="btn btn-sm btn-danger">Deletar</button>
+                            <button [hidden]="atendimento.done" (click)="prepareUpdate(atendimento)" style="margin-left: 5px;" class="btn btn-sm btn-secondary">Alterar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-todo": {
+    "angular-atendimento": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-todo",
+            "outputPath": "dist/angular-atendimento",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-todo:build"
+            "browserTarget": "angular-atendimento:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-todo:build:production"
+              "browserTarget": "angular-atendimento:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-todo:build"
+            "browserTarget": "angular-atendimento:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-todo:serve"
+            "devServerTarget": "angular-atendimento:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-todo:serve:production"
+              "devServerTarget": "angular-atendimento:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-todo",
+  "defaultProject": "angular-atendimento",
   "cli": {
     "analytics": "11790dce-9ec2-4b3d-b52e-0cd2af1ce388"
   }

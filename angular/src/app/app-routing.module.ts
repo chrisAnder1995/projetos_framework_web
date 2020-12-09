@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { TodoComponent } from './todo/todo.component';
+import { AtendimentoComponent } from './atendimento/atendimento.component';
 
 
 const routes: Routes = [
-  { path: '', component: TodoComponent }
+  { path: '', component: AtendimentoComponent }
 ];
 
 @NgModule({

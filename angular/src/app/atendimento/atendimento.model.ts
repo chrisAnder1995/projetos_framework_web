@@ -1,4 +1,4 @@
-// export class Todo {
+// export class Atendimento {
 
 //   id: number;
 //   description: string;
@@ -6,7 +6,7 @@
 
 // }
 
-export class Todo {
+export class Atendimento {
 
   id: number;
   coordenador: string;
